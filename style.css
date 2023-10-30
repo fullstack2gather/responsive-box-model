@@ -1,0 +1,68 @@
+.card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: row;
+  
+   }
+   
+   .card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info {
+    --color: #d120ab08;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    row-gap: 90px;
+   display: flex;
+   }
+   
+   .card .title {
+    height: 200px;
+    width: 200px;
+ background-position: cover;
+ border-radius: .7rem ;
+
+    
+   }
+   
+   /*Hover*/
+   .card:hover::after {
+    opacity: 0px;
+   }
+   
+   .card:hover .card-info {
+    color: #0cd413;
+    transition: color 6s;
+   }
+   
